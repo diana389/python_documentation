@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>PYTHON INFO</header>
+        <a class="nav-link" href="#introduction">Introduction</a>
+        <a class="nav-link" href="#hello-world!">Hello, World!</a>
+        <a class="nav-link" href="#indentation">Indentation</a>
+        <a class="nav-link" href="#conditions">Conditions</a>
+        <a class="nav-link" href="#loops">Loops</a>
+        <a class="nav-link" href="#reference">Reference</a>
+    </nav>
+
+    <div></div>
+
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code
+                readability with the use of significant indentation.</p>
+            <p>Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including
+                structured (particularly procedural), object-oriented and functional programming. It is often described
+                as a "batteries included" language due to its comprehensive standard library.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> began working on Python in
+                the late 1980s as a successor to the ABC programming language and first released it in 1991 as Python
+                0.9.0. Python 2.0 was released in 2000 and introduced new features such as list comprehensions,
+                cycle-detecting garbage collection, reference counting, and Unicode support. Python 3.0, released in
+                2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2
+                was discontinued with version 2.7.18 in 2020.</p>
+            <p>Python consistently ranks as one of the most popular programming languages.</p>
+        </section>
+
+        <section class="main-section" id="hello-world!">
+            <header>Hello, World!</header>
+            <p>Python is a very simple language, and has a very straightforward syntax. It encourages programmers to
+                program without boilerplate (prepared) code. The simplest directive in Python is the "print" directive -
+                it simply prints out a line (and also includes a newline, unlike in C).</p>
+            <p>There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different. This
+                tutorial uses Python 3, because it more semantically correct and supports newer features. For example,
+                one difference between Python 2 and 3 is the print statement. In Python 2, the "print" statement is not
+                a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and
+                must be invoked with parentheses.</p>
+            <p>To print a string in Python 3, just write:</p>
+            <code>print("This line will be printed.")</code>
+        </section>
+
+        <section class="main-section" id="indentation">
+            <header>Variables and Types</header>
+            <p>Python is completely object oriented, and not "statically typed". You do not need to declare variables
+                before using them, or declare their type. Every variable in Python is an object.</p>
+            <p>This tutorial will go over a few basic types of variables.</p>
+            <li>Numbers</li>
+            <p>Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals). (It
+                also supports complex numbers, which will not be explained in this tutorial). </p>
+            <p>To define an integer, use the following syntax:</p>
+            <code>myint = 7<br>
+                print(myint)</code>
+            <p>To define a floating point number, you may use one of the following notations:</p>
+            <code>myfloat = 7.0<br>
+                print(myfloat)<br>
+                myfloat = float(7)<br>
+                print(myfloat)</code>
+            <li>Strings</li>
+            <p>Strings are defined either with a single quote or a double quotes.</p>
+            <code>mystring = 'hello'<br>
+                print(mystring)<br>
+                mystring = "hello"<br>
+                print(mystring)</code>
+        </section>
+
+        <section class="main-section" id="conditions">
+            <header>Conditions</header>
+            <p>Python uses boolean logic to evaluate conditions. The boolean values True and False are returned when an
+                expression is compared or evaluated.</p>
+            <li>Boolean operators</li>
+            <p>The "and" and "or" boolean operators allow building complex boolean expressions, for example:</p>
+            <code>name = "John"
+                age = 23<br>
+                if name == "John" and age == 23:<br>
+                    <span>print("Your name is John, and you are also 23 years old.")</span><br>
+                
+                if name == "John" or name == "Rick":<br>
+                    <span>("Your name is either John or Rick.")</span></code>
+            <li>The "in" operator</li>
+            <p>The "in" operator could be used to check if a specified object exists within an iterable object
+                container, such as a list:</p>
+            <code>name = "John"<br>
+                if name in ["John", "Rick"]:<br>
+                    <span>print("Your name is either John or Rick.")</span></code>
+            <p>Python uses indentation to define code blocks, instead of brackets. The standard Python indentation is 4
+                spaces, although tabs and any other space size will work, as long as it is consistent. Notice that code
+                blocks do not need any termination.</p>
+            <p>Here is an example for using Python's "if" statement using code blocks:</p>
+            <code>statement = False<br>
+                another_statement = True<br>
+                if statement is True:<br>
+                    <span># do something</span><br>
+                    <span>pass</span><br>
+                elif another_statement is True: # else if<br>
+                    <span># do something else</span><br>
+                    <span>pass</span><br>
+                else:<br>
+                    <span># do another thing</span><br>
+                    <span>pass</span></code>
+            <li>The 'is' operator</li>
+            <p>Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but
+                the instances themselves. For example:</p>
+            <code>x = [1,2,3]<br>
+                y = [1,2,3]<br>
+                print(x == y) # Prints out True<br>
+                print(x is y) # Prints out False</code>
+            <li>The "not" operator</li>
+            <p>Using "not" before a boolean expression inverts it:</p>
+            <code>
+                print(not False) # Prints out True<br>
+                print((not False) == (False)) # Prints out False
+            </code>
+        </section>
+
+        <section class="main-section" id="loops">
+            <header>Loops</header>
+            <p>There are two types of loops in Python, for and while.</p>
+            <li>The "for" loop</li>
+            <p>For loops iterate over a given sequence. Here is an example:</p>
+            <code>primes = [2, 3, 5, 7]<br>
+                for prime in primes:<br>
+                    <span>print(prime)</span></code>
+            <li>"while" loops</li>
+            <p>While loops repeat as long as a certain boolean condition is met. For example:</p>
+            <code># Prints out 0,1,2,3,4<br><br>
+                count = 0<br>
+                while count < 5:<br>
+                    <span>print(count)</span><br>
+                    <span>count += 1  # This is the same as count = count + 1</span></code>
+            <li>"break" and "continue" statements</li>
+            <p>"break" is used to exit a for loop or a while loop, whereas continue is used to skip the current block,
+                and return to the "for" or "while" statement. A few examples:</p>
+            <code># Prints out 0,1,2,3,4<br><br>
+
+                count = 0<br>
+                while True:<br>
+                    <span>(count)</span><br>
+                    <span>count += 1</span><br>
+                    <span>if count >= 5:</span><br>
+                    <span id="double">break</span><br><br>
+                
+                # Prints out only odd numbers - 1,3,5,7,9<br>
+                for x in range(10):<br>
+                    <span># Check if x is even</span><br>
+                    <span>if x % 2 == 0:</span><br>
+                    <span id="double">continue</span><br>
+                    <span>print(x)</span></code>
+        </section>
+
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <li>All the documentation in this page is taken from <a
+                    href="https://www.learnpython.org/en/Welcome">learnpython.org</a>.</li>
+        </section>
+    </main>
+</body>
+
+</html>
