@@ -71,7 +71,7 @@ span {
 
     #navbar {
         padding: 20px 50px 50px 50px;
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
